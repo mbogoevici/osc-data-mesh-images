@@ -22,6 +22,6 @@ RUN mkdir -p /opt/airflow/dag_generated_configs
 #WORKDIR /usr/local/airflow/
 ENV PIP_USER=false
 RUN python -m venv dbt_venv && source dbt_venv/bin/activate && \
-     pip install --no-cache-dir dbt-trino && deactivate
+     pip install --no-cache-dir dbt-trino dbt-artifacts-parser && deactivate
 ENV PIP_USER=true
 ENV PATH="$PATH:/opt/airflow/dbt_venv/bin"
