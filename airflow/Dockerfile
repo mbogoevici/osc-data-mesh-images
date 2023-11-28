@@ -25,5 +25,3 @@ RUN python -m venv dbt_venv && source dbt_venv/bin/activate && \
      pip install --no-cache-dir dbt-trino && deactivate
 ENV PIP_USER=true
 ENV PATH="$PATH:/opt/airflow/dbt_venv/bin"
-
-ENV AIRFLOW__CORE__DAGBAG_IMPORT_TIMEOUT="120.0"
